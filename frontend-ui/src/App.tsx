@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import TodoList from './components/toDoList';
-import TodoFilter from './components/toDoFilter';
-import TodoStats from './components/toDoStats';
+import {TodoList} from './components/toDoList';
+import {TodoFilter} from './components/toDoFilter';
+import {TodoStats} from './components/toDoStats';
 import { getTodos, createTodo, updateTodo, deleteTodo, clearCompleted } from './api/toDoApi';
 import type { Todo, FilterType } from './types/todo';
 

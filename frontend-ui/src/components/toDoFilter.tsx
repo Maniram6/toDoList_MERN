@@ -7,7 +7,7 @@ interface TodoFilterProps {
   hasCompleted: boolean;
 }
 
-const TodoFilter: React.FC<TodoFilterProps> = ({ 
+export const TodoFilter: React.FC<TodoFilterProps> = ({ 
   currentFilter, 
   onFilterChange, 
   onClearCompleted, 
@@ -42,4 +42,4 @@ const TodoFilter: React.FC<TodoFilterProps> = ({
   );
 };
 
-export default TodoFilter;
+// export default TodoFilter;

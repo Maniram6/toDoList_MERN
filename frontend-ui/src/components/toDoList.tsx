@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Todo } from '../types/todo';
-import TodoItem from './toDoItem';
+import {TodoItem} from './toDoItem';
 
 interface TodoListProps {
   todos: Todo[];
@@ -10,7 +10,7 @@ interface TodoListProps {
   onDeleteTodo: (id: string) => void;
 }
 
-const TodoList: React.FC<TodoListProps> = ({ 
+export const TodoList: React.FC<TodoListProps> = ({ 
   todos, 
   onAddTodo, 
   onToggleTodo, 
@@ -56,4 +56,4 @@ const TodoList: React.FC<TodoListProps> = ({
   );
 };
 
-export default TodoList;
+// export default TodoList;
