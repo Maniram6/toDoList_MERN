@@ -41,5 +41,3 @@ export const TodoFilter: React.FC<TodoFilterProps> = ({
     </div>
   );
 };
-
-// export default TodoFilter;

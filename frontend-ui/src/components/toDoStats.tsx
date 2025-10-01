@@ -5,6 +5,7 @@ interface TodoStatsProps {
 }
 
 export const TodoStats: React.FC<TodoStatsProps> = ({ todos }) => {
+  
   const activeCount = todos.filter(todo => !todo.completed).length;
 
   return (
@@ -15,5 +16,3 @@ export const TodoStats: React.FC<TodoStatsProps> = ({ todos }) => {
     </div>
   );
 };
-
-// export default TodoStats;

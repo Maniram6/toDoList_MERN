@@ -74,5 +74,3 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onEdit, onDe
     </li>
   );
 };
-
-// export default TodoItem;
