@@ -32,10 +32,10 @@ function App() {
     }
   };
 
-  const addTodo = async (text: string): Promise<void> => {
+  const addTodo = async (text: string, category:string): Promise<void> => {
     try {
       setError(null);
-      const newTodo = await createTodo(text);
+      const newTodo = await createTodo({text, category});
       setTodos([newTodo, ...todos]);
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Failed to create todo';

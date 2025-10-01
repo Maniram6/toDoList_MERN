@@ -8,6 +8,7 @@ export interface ITodo extends Document {
 
 export interface CreateTodoRequest {
   text: string;
+  category; string;
 }
 
 export interface UpdateTodoRequest {

@@ -32,14 +32,19 @@ router.get('/:id', async (req: Request<{ id: string }>, res: Response) => {
 // CREATE new todo
 router.post('/', async (req: Request<{}, {}, CreateTodoRequest>, res: Response) => {
   try {
-    const { text } = req.body;
+    const { text, category } = req.body;
     
     if (!text || text.trim() === '') {
       return res.status(400).json({ message: 'Todo text is required' });
     }
 
+    if (!category || category.trim() === '') {
+      return res.status(400).json({ message: 'category is required' });
+    }
+
     const todo = new Todo({
-      text: text.trim()
+      text: text.trim(),
+      category: category.trim()
     });
     
     const newTodo = await todo.save();

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Todo, CreateTodoData, UpdateTodoData, ApiError } from '../types/todo';
+import type { Todo, CreateTodoData,UpdateTodoData } from '../types/todo';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
@@ -12,13 +12,13 @@ export const getTodos = async (): Promise<Todo[]> => {
   return response.data;
 };
 
-export const createTodo = async (text: string): Promise<Todo> => {
-  const response = await api.post<Todo>('/todos', { text });
+export const createTodo = async (createBody: CreateTodoData): Promise<Todo> => {
+  const response = await api.post<Todo>('/todos', createBody);
   return response.data;
 };
 
-export const updateTodo = async (id: string, updates: UpdateTodoData): Promise<Todo> => {
-  const response = await api.put<Todo>(`/todos/${id}`, updates);
+export const updateTodo = async (id: string, updateBody: UpdateTodoData): Promise<Todo> => {
+  const response = await api.put<Todo>(`/todos/${id}`, updateBody);
   return response.data;
 };
 
