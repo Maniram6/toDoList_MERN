@@ -8,7 +8,7 @@ interface TodoItemProps {
   onDelete: () => void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onEdit, onDelete }) => {
+export const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onEdit, onDelete }) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [editText, setEditText] = useState<string>(todo.text);
   const editInputRef = useRef<HTMLInputElement>(null);
@@ -75,4 +75,4 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onEdit, onDelete })
   );
 };
 
-export default TodoItem;
+// export default TodoItem;
